@@ -1,0 +1,100 @@
+                            HYBRID INHERITENCE WITH DYNAMIC BINDING
+package slt;
+ class Sup {
+	 String name;
+	 String id;
+	 Sup(String name,String id)
+	 {
+		 this.id=id;
+		 this.name=name;
+	System.out.println(id);
+	System.out.println(name);
+	 }
+	 
+	
+	
+
+}
+ class Maths extends Sup
+ {
+	 Maths()
+	 {
+		 super("kamali","1234");
+		 System.out.println("maths department");
+		 int mathsMarks=124;
+		 System.out.println(mathsMarks);
+	 }
+ }
+class Electronics extends Sup
+{
+	Electronics()
+	{
+	super("kamali","1234");
+	String n="Electronics rocks";
+	System.out.println(n);
+	}
+}
+class Biology extends Sup
+{
+	Biology()
+	{
+		super("kamali","1234");
+		System.out.println("biology is the study of botany and zoology");
+	}
+}
+class Botany extends Biology
+{
+	Botany()
+	{
+		super();
+		System.out.println("it is one of the Derived class of biology");
+		
+	}
+}
+class Zoology extends Biology
+{
+	Zoology()
+	{
+		super();
+		System.out.println("it is one of the Derived class of biology");
+		
+			
+		}
+	}
+class Computer extends Sup
+{
+	Computer()
+	{
+		super("kamali","1234");
+		System.out.println("computer world");
+	}
+}
+class Hardware extends Computer
+{
+	Hardware()
+	{
+		super();
+		System.out.println("irumbile oru irthiyam mulaikutho...Example robot");
+	}
+}
+public class Stud extends Computer
+{
+	Stud()
+	{
+		super();
+		System.out.println("thank you");
+	}
+	public static void main(String args[])
+	{
+		Sup s=new Sup("kamali","1234");
+		s=new Maths();
+		s=new Electronics();
+		s=new Biology();
+		s=new Botany();
+		s=new Zoology();
+		s=new Computer();
+		s=new Hardware();
+		s=new Stud();
+		
+	}
+}
